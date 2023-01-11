@@ -7,11 +7,12 @@ import {earningData,SparklineAreaData,ecomPieChartDat} from '../data/dummy'
 import { useStateContext } from '../context/ContextP'
 
 const Ecommerse = () => {
+  const{currentColor,currentMode}=useStateContext()
   return (
     <div className='mt-12'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
         <div className='bg-white
-        dark:text-grey-200
+        dark:text-gray-200
         dark:bg-secondary-dark-bg h-44
         rounded-xl w-full lg:w-80 p-8 pt-9 m-3
         bg-hero-pattern bg-no-repeat
@@ -19,7 +20,7 @@ const Ecommerse = () => {
         
         <div className='flex justify-between item-center'>
           <div>
-            <p className='font-bold text-grey-400'>
+            <p className='font-bold text-gray-400'>
               Earnings
             </p>
             <p className='text-2xl'>$63,448
@@ -30,7 +31,7 @@ const Ecommerse = () => {
           <div className='mt-6'>
           <Button 
           color="white"
-          bgColor='blue'
+          bgColor={currentColor}
           text="Download"
           borderRadius="10px"
           size='md'
@@ -48,8 +49,9 @@ const Ecommerse = () => {
               <button type="button"
               style={{color:item.iconColor,
                 backgroundColor:item.iconBg
+                
               }}
-              className="text-2xl opacity-0.9">
+              className="text-2xl opacity-0.9 rounded-full  p-4 hover:drop-shadow-xl">
                 {item.icon}
               </button> 
               <p className='='mt-3>
@@ -68,13 +70,10 @@ const Ecommerse = () => {
         </div>
       </div>
       
-      <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white
-        dark:text-grey-200
-        dark:bg-secondary-dark-bg m-3 p-4 
-        rounded-2x1 md:w-780">
-        <div className="flex justify-between">
-            <p className="font-semibold text-xl">
+      <div className="flex gap-50 flex-wrap justify-center ">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2x1 md:w-780">
+          <div className="flex justify-between">
+              <p className="font-semibold text-xl">
               Revenue Updates
             </p>
             <div className="flex items-center gap-4">  
@@ -105,25 +104,25 @@ const Ecommerse = () => {
                 $48,438
                   </span>
                 </p>
-                <p className='text-grey-500 mt-1'>
+                <p className='text-gray-500 mt-1'>
                 Expenses
                 </p>
                 </div>
           <div className="mt-5">
                 <SparkLine
-                currentColor="blue"
+                currentColor={currentColor}
                 id="line-sparkline"
                 type="Line"
                 height="80px"
                 width="250px"
                 data={SparklineAreaData}
-                color="blue"
+                color={currentColor}
               />
       </div>
             <div className='mt-10'>
               <Button 
                 color="white"
-                bgColor="blue"
+                bgColor={currentColor}
                 text="Download Report"
                 borderRadius="10px"
                 />
@@ -131,6 +130,7 @@ const Ecommerse = () => {
           </div>
           <div>
               <Stacked 
+              currentMode={currentMode}
               width="320px"
               height="360px"/>
             </div>

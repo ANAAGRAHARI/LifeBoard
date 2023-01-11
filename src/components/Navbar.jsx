@@ -29,7 +29,7 @@ const NavButton =({title,customFunc,icon,color,dotColor})=>(
 )
 
 const Navbar = () => {
-  const {activeMenu, setActiveMenu,isClicked,setIsClicked,screenSize, setscreenSize,handelClicked } =useStateContext();
+  const {activeMenu, setActiveMenu,isClicked,setIsClicked,screenSize, setscreenSize,handelClicked,currentColor } =useStateContext();
   useEffect(()=>{
     const handleResize=()=>setscreenSize
     (window.innerWidth);
@@ -50,7 +50,7 @@ const Navbar = () => {
       <NavButton
         title="Menu" 
         customFunc={()=>setActiveMenu((prevActiveMenu)=>!prevActiveMenu)}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu/>}
         />
     <div className='flex'>
@@ -58,21 +58,21 @@ const Navbar = () => {
         title="chat" 
         // eslint-disable-next-line no-undef
         customFunc={()=>handelClicked ('chat')}
-        color="blue"
+        color={currentColor}
         icon={<BsChatLeft/>}
         />
         <NavButton
         title="Notificaion" 
         // eslint-disable-next-line no-undef
         customFunc={()=>handelClicked ('notification')}
-        color="blue"
+        color={currentColor}
         icon={<RiNotification3Line/>}
         />
         <NavButton
         title="cart" 
         // eslint-disable-next-line no-undef
         customFunc={()=>handelClicked ('cart')}
-        color="blue"
+        color={currentColor}
         icon={<FiShoppingCart/>}
         />
         <TooltipComponent 
@@ -85,7 +85,7 @@ const Navbar = () => {
               <img className="rounded-full w-8 h-8" src={avatar} alt='avatar'/>
             <p>
               <span className='text-gray-400 text-14'>Hi,</span>{''}
-              <span className='text-grey-400 font-bold ml-1 text-14'>Name</span>
+              <span className='text-gray-400 font-bold ml-1 text-14'>Name</span>
             </p>
             <MdKeyboardArrowDown className='text-gray-400 text-14'/>
             </div>
