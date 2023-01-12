@@ -61,7 +61,7 @@ export const kanbanGrid = [
     keyField: 'Close',
     allowToggle: true },
 ];
-const gridEmployeeProfile = (props) => (
+export const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
@@ -436,7 +436,7 @@ export const customersGrid = [
 export const employeesGrid = [
   { headerText: 'Employee',
     width: '150',
-    template: gridEmployeeProfile,
+    template:'gridEmployeeProfile',
     textAlign: 'Center' },
   { field: 'Name',
     headerText: '',
@@ -451,7 +451,8 @@ export const employeesGrid = [
   { headerText: 'Country',
     width: '120',
     textAlign: 'Center',
-    template: gridEmployeeCountry },
+    template: 'gridEmployeeCountry',
+  },
 
   { field: 'HireDate',
     headerText: 'Hire Date',
@@ -873,7 +874,7 @@ export const userProfileData = [
 export const ordersGrid = [
   {
     headerText: 'Image',
-    template: gridOrderImage,
+    template: 'gridOrderImage',
     textAlign: 'Center',
     width: '120',
   },
@@ -899,7 +900,7 @@ export const ordersGrid = [
   },
   {
     headerText: 'Status',
-    template: gridOrderStatus,
+    template: 'gridOrderStatus',
     field: 'OrderItems',
     textAlign: 'Center',
     width: '120',
