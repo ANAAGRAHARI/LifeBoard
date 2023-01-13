@@ -395,7 +395,7 @@ export const customersGrid = [
   { type: 'checkbox', width: '50' },
   { headerText: 'Name',
     width: '150',
-    template: customerGridImage,
+    template: 'customerGridImage',
     textAlign: 'Center' },
   { field: 'ProjectName',
     headerText: 'Project Name',
@@ -406,7 +406,7 @@ export const customersGrid = [
     width: '130',
     format: 'yMd',
     textAlign: 'Center',
-    template: customerGridStatus },
+    template: 'customerGridStatus' },
   {
     field: 'Weeks',
     headerText: 'Weeks',

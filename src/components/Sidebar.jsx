@@ -5,6 +5,7 @@ import {MdOutlineCancel} from 'react-icons/md'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import {links} from '../data/dummy'
 import { useStateContext } from '../context/ContextP';
+import logo from '../data/icon.png'
 
 const Sidebar = () => {
   const {activeMenu ,setActiveMenu,screenSize,currentColor} = useStateContext()
@@ -23,8 +24,8 @@ const Sidebar = () => {
         <div className="flex justify-between items-center">
         <Link to="/" onClick={handelCloseSidebar}
             className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900 ">
-            <SiShopware />
-            <span>Shoppy</span> 
+            <img src = {logo} alt='icon' width= '30px' hiegth = '30px' />
+            <span>LifeBaord</span> 
         </Link>
         <TooltipComponent content="Menu" position="BottomCenter">
           <button type="button" onClick={()=>{setActiveMenu((prevActiveMenu)=>!prevActiveMenu)}} 
