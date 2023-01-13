@@ -514,7 +514,7 @@ export const links = [
         icon: <FiEdit />,
       },
       {
-        name: 'color-picker',
+        name: 'Theme-color-picker',
         icon: <BiColorFill />,
       },
     ],
@@ -822,7 +822,7 @@ export const medicalproBranding = {
 
 export const themeColors = [
   {
-    name: 'blue-theme',
+    name: 'Custom-Color',
     color: '#1A97F5',
   },
   {
