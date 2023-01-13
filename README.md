@@ -7,7 +7,10 @@ React Hooks
 TailWindCSS
 
 ### Theme Change 
--Settings option on the Right gives access to the Theme Change Settings 
-  -Two modes are available **Dark & light**
-    - Six default color change options 
-      -The First option is customizable through **Theme Color Picker**
+Settings option on the Right gives access to the Theme Change Settings 
+-Two modes are available **Dark & light**
+ -Six default color change options 
+  -The First option is customizable through **Theme Color Picker**
+  
+##Website
+(https://lifedashboard.netlify.app/)
